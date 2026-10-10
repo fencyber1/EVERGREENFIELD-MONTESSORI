@@ -1,5 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { Mail, MapPin, Menu, MessageCircle, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Menu, MessageCircle, Phone, Youtube } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -129,7 +129,13 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <div className="flex items-center gap-3"><SchoolCrest /><span className="font-extrabold text-paper">Evergreenfield Montessori School</span></div>
             <p className="mt-4 font-serif text-lg italic leading-snug text-paper">“Knowledge, Scholarship, Illumination.”</p>
             <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-paper/50">Our motto</p>
-            {/* TODO: add official social profiles for Evergreenfield Montessori School */}
+            <div className="mt-4 flex items-center gap-2">
+              <Button asChild variant="outline" size="icon" className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper" aria-label="Evergreenfield Montessori School on Facebook"><a href="https://web.facebook.com/evergreenfieldmontsch" target="_blank" rel="noreferrer"><Facebook className="size-4" /></a></Button>
+              <Button asChild variant="outline" size="icon" className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper" aria-label="Evergreenfield Montessori School on Instagram"><a href="https://www.instagram.com/evergreenfieldmontsch/" target="_blank" rel="noreferrer"><Instagram className="size-4" /></a></Button>
+              <Button asChild variant="outline" size="icon" className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper" aria-label="Evergreenfield Montessori School on TikTok"><a href="https://www.tiktok.com/@evergreenfieldmontsch" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" className="size-4" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" /></svg></a></Button>
+              <Button asChild variant="outline" size="icon" className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper" aria-label="Evergreenfield Montessori School on X"><a href="https://twitter.com/evergreenfield1" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" className="size-4" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg></a></Button>
+              <Button asChild variant="outline" size="icon" className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper" aria-label="Evergreenfield Montessori School on YouTube"><a href="https://www.youtube.com/@evergreenfieldmontsch" target="_blank" rel="noreferrer"><Youtube className="size-4" /></a></Button>
+            </div>
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-action">Explore</p>

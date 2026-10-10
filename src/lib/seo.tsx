@@ -74,9 +74,13 @@ export const schoolSchema = {
     },
   ],
   openingHours: "Mo-Fr 06:00-17:00",
-  // TODO: add official social profiles, e.g.
-  // sameAs: ["https://web.facebook.com/evergreenfieldmontessori"],
-  sameAs: [],
+  sameAs: [
+    "https://web.facebook.com/evergreenfieldmontsch",
+    "https://www.instagram.com/evergreenfieldmontsch/",
+    "https://www.tiktok.com/@evergreenfieldmontsch",
+    "https://twitter.com/evergreenfield1",
+    "https://www.youtube.com/@evergreenfieldmontsch",
+  ],
 };
 
 export const faqSchema = {
