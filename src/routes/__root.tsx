@@ -14,8 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AdmissionsChat } from "@/components/school-shared";
 import { SiteShell } from "@/components/site-shell";
 
-// TODO: add public/logo.png with the Evergreenfield crest and point the icon
-// links below back to "/logo.png".
+// TODO: once public/logo.png (school crest) is added, point the icon links below to "/logo.png".
 const FAVICON =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231d6b3c'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='bold' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E";
 
@@ -84,8 +83,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Evergreenfield Montessori School — Preschool & Creche in Accra, Ghana" },
-      { name: "description", content: "Evergreenfield Montessori School is a preschool, creche and nursery at Ablekuma Fan-Milk, Accra, Ghana — UK EYFS curriculum for children 6 months to 5 years." },
+      { title: "Evergreenfield Montessori School — Montessori Creche to JHS in Accra, Ghana" },
+      { name: "description", content: "Evergreenfield Montessori School is a Montessori school at Ablekuma Fan-Milk, Accra, Ghana — Creche to JHS, Ghana curriculum with the Montessori method." },
       { name: "author", content: "Evergreenfield Montessori School" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Evergreenfield Montessori School" },

@@ -32,8 +32,8 @@ return <article key={title as string} className="rounded-lg border border-ink/10
 <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-growth"/>{x}</li>)}</ul>:<div className="mt-4 space-y-4 text-sm text-paper/70">
 <p className="leading-relaxed">{list as string}</p>
 <div className="flex flex-col gap-2">
-<a href="tel:+233553355377" className="rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-center font-bold text-paper hover:bg-paper/20">Call 055 335 5377</a>
-<a href="https://wa.me/233553355377" target="_blank" rel="noreferrer" className="rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-center font-bold text-paper hover:bg-paper/20">WhatsApp us</a>
+<a href="tel:+233531234567" className="rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-center font-bold text-paper hover:bg-paper/20">Call 053 123 4567</a>
+<a href="https://wa.me/233531234567" target="_blank" rel="noreferrer" className="rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-center font-bold text-paper hover:bg-paper/20">WhatsApp us</a>
 <Button asChild className="rounded-none bg-action text-action-foreground hover:bg-action/90">
 <Link to="/contact">Send an enquiry</Link>
 </Button>

@@ -4,7 +4,7 @@ import { PageHero, Section } from "@/components/school-shared";
 
 import { seoPage } from "@/lib/seo";
 
-export const Route=createFileRoute("/campus")({head:()=>seoPage({title:"Campus & Facilities — Evergreenfield Montessori School, Accra",description:"Tour Evergreenfield Montessori School's classrooms, nursery rooms, play areas and outdoor spaces — 24-hour CCTV, cots, activity mats and homely, well-ventilated rooms at Ablekuma Fan-Milk, Accra.",path:"/campus"}),component:Campus});
+export const Route=createFileRoute("/campus")({head:()=>seoPage({title:"Campus & Facilities — Evergreenfield Montessori School, Accra",description:"Tour Evergreenfield Montessori School's classrooms, laboratories, play areas and outdoor spaces — 24-hour CCTV, well-stocked library, and homely, well-ventilated rooms for Creche to JHS at Ablekuma Fan-Milk, Accra.",path:"/campus"}),component:Campus});
 
 // TODO: add Evergreenfield campus photos to public/ and reference them here.
 const spaces=[["Classroom learning","Welcoming spaces for guided learning, creativity, and collaborative discovery."],["Reading & learning","Colourful resources and shared reading help young learners build confidence together."],["Sport & outdoor learning","A dedicated outdoor area designed for movement, coordination, and active play."]] as const;

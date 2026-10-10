@@ -10,7 +10,7 @@ export const Route = createFileRoute("/gallery")({
     seoPage({
       title: "Photo Gallery | Evergreenfield Montessori School",
       description:
-        "See life at Evergreenfield Montessori School at Ablekuma Fan-Milk, Accra, Ghana — classrooms, outdoor play, reading, and school events for children 6 months to 5 years.",
+        "See life at Evergreenfield Montessori School at Ablekuma Fan-Milk, Accra, Ghana — classrooms, outdoor play, reading, and school events from Creche to JHS.",
       path: "/gallery",
     }),
   component: Gallery,

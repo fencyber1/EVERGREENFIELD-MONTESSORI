@@ -1,14 +1,14 @@
 export const SITE_URL = "https://evergreenfieldmontessori.com"; // TODO: update to the real domain when available
 export const SITE_NAME = "Evergreenfield Montessori School";
 export const OG_IMAGE = `${SITE_URL}/og-image.png`; // TODO: add og-image.png to public/
-export const PHONE_MAIN = "+233553355377";
-export const PHONE_DISPLAY = "055 335 5377";
-export const WHATSAPP_URL = "https://wa.me/233553355377";
-export const SITE_EMAIL = "evergreenfieldmontessori@gmail.com"; // TODO: update to the real school email
-export const MOTTO = "Love and Education That Enrich for a Life Time"; // TODO: update if Evergreenfield has its own motto
-export const ADDRESS_SHORT = "JMMR+W9, Ablekuma Fan-Milk, Accra, Ghana";
+export const PHONE_MAIN = "+233531234567"; // fictional demo number
+export const PHONE_DISPLAY = "053 123 4567"; // fictional demo number
+export const WHATSAPP_URL = "https://wa.me/233531234567"; // fictional demo number
+export const SITE_EMAIL = "info@evergreenfieldmontessori.edu.gh"; // fictional demo email
+export const MOTTO = "Knowledge, Scholarship, Illumination";
+export const ADDRESS_SHORT = "Plot 12, Mango Avenue, Ablekuma Fan-Milk, Accra, Ghana"; // fictional demo address
 export const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=JMMR%2BW9+Ablekuma+Fan-Milk+Accra";
+  "https://www.google.com/maps/search/?api=1&query=Mango+Avenue+Ablekuma+Fan-Milk+Accra";
 export const HOURS_SHORT = "Mon–Fri · 6:00am–5:00pm · Sat–Sun Closed";
 
 export function pageUrl(path: string) {
@@ -52,9 +52,11 @@ export const schoolSchema = {
   image: OG_IMAGE,
   email: SITE_EMAIL,
   telephone: PHONE_MAIN,
+  foundingDate: "2012",
+  founder: [{ "@type": "Person", name: "Grace Owusu" }],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "JMMR+W9, Ablekuma Fan-Milk",
+    streetAddress: "Plot 12, Mango Avenue, Ablekuma Fan-Milk",
     addressLocality: "Accra",
     addressCountry: "GH",
   },
@@ -64,7 +66,7 @@ export const schoolSchema = {
       name: "Evergreenfield Montessori School — Ablekuma Fan-Milk",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "JMMR+W9, Ablekuma Fan-Milk",
+        streetAddress: "Plot 12, Mango Avenue, Ablekuma Fan-Milk",
         addressLocality: "Accra",
         addressCountry: "GH",
       },
@@ -86,7 +88,7 @@ export const faqSchema = {
       name: "What ages does Evergreenfield Montessori School accept?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We welcome children from 6 months to 5 years — call 055 335 5377 and we will help with class placement.",
+        text: "We welcome children from 18 months to 15 years — from Creche to JHS — call 053 123 4567 and we will help with class placement.",
       },
     },
     {
@@ -102,7 +104,7 @@ export const faqSchema = {
       name: "Can I tour the campus before enrolling?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Appointments may be booked by phone — call 055 335 5377 — and we will arrange a weekday visit.",
+        text: "Yes. Appointments may be booked by phone — call 053 123 4567 — and we will arrange a weekday visit.",
       },
     },
     {
@@ -126,7 +128,7 @@ export const faqSchema = {
       name: "Where is Evergreenfield Montessori School located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We are at JMMR+W9, Ablekuma Fan-Milk, Accra, Ghana.",
+        text: "We are at Plot 12, Mango Avenue, Ablekuma Fan-Milk, Accra, Ghana.",
       },
     },
   ],
