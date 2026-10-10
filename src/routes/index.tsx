@@ -17,24 +17,24 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const GROW_VERBS = ["Grow", "Thrive", "Shine", "Soar"] as const;
+const HERO_VERBS = ["Lead", "Thrive", "Shine", "Soar"] as const;
 
-function RotatingGrowVerb() {
+function RotatingHeroVerb() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = window.setInterval(() => {
-      setIndex((i) => (i + 1) % GROW_VERBS.length);
+      setIndex((i) => (i + 1) % HERO_VERBS.length);
     }, 2500);
     return () => window.clearInterval(id);
   }, []);
 
   return (
     <>
-      <span className="sr-only">Grow</span>
-      <span key={GROW_VERBS[index]} aria-hidden="true" className="animate-word-in">
-        {GROW_VERBS[index]}
+      <span className="sr-only">Lead</span>
+      <span key={HERO_VERBS[index]} aria-hidden="true" className="animate-word-in">
+        {HERO_VERBS[index]}
       </span>
     </>
   );
@@ -50,7 +50,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:py-32 lg:py-40">
           <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-paper/90"><span className="h-px w-10 bg-action" /> Montessori School in Ghana · Ablekuma Fan-Milk · Accra</p>
-          <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.95] sm:text-6xl lg:text-7xl">Learn. Play. <span className="font-serif font-medium italic text-action"><RotatingGrowVerb />{" "}together.</span></h1>
+          <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.95] sm:text-6xl lg:text-7xl">Learn. Grow. <span className="font-serif font-medium italic text-action"><RotatingHeroVerb />{" "}together.</span></h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/75 sm:text-lg">At Evergreenfield, we believe every child's future begins with a strong foundation. From Creche to JHS, we nurture each child's potential through hands-on Montessori learning, strong academics, and values that last a lifetime.</p>
           <div className="mt-8 flex flex-wrap gap-3"><Button asChild className="h-11 rounded-none bg-action text-action-foreground hover:bg-action/90"><Link to="/contact">Contact Admissions <ArrowRight /></Link></Button><Button asChild variant="outline" className="h-11 rounded-none border-paper/20 bg-paper/10 text-paper hover:bg-paper/20 hover:text-paper"><Link to="/programs">Explore programs</Link></Button></div>
         </div>
