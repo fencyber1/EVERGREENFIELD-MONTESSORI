@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Evergreenfield Montessori School" },
       { property: "og:locale", content: "en_GH" },
-      { property: "og:image", content: "https://evergreenfieldmontessori.com/logo.jpg" },
+      { property: "og:image", content: "https://evergreenfield-montessori.vercel.app/logo.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#041a36" },
     ],

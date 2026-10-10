@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://evergreenfieldmontessori.com/sitemap.xml
+Sitemap: https://evergreenfield-montessori.vercel.app/sitemap.xml

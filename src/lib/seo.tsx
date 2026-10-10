@@ -1,4 +1,4 @@
-export const SITE_URL = "https://evergreenfieldmontessori.com"; // TODO: update to the real domain when available
+export const SITE_URL = "https://evergreenfield-montessori.vercel.app";
 export const SITE_NAME = "Evergreenfield Montessori School";
 export const OG_IMAGE = `${SITE_URL}/logo.jpg`; // TODO: add a proper 1200x630 og-image.png to public/
 export const PHONE_MAIN = "+233553355377";
