@@ -1,6 +1,8 @@
 export const SITE_URL = "https://evergreenfield-montessori.vercel.app";
 export const SITE_NAME = "Evergreenfield Montessori School";
-export const OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
 export const PHONE_MAIN = "+233553355377";
 export const PHONE_DISPLAY = "055 335 5377";
 export const WHATSAPP_URL = "https://wa.me/233553355377";
@@ -25,13 +27,16 @@ export function seoPage(opts: { title: string; description: string; path: string
       { property: "og:description", content: opts.description },
       { property: "og:url", content: url },
       { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: String(OG_IMAGE_WIDTH) },
+      { property: "og:image:height", content: String(OG_IMAGE_HEIGHT) },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:alt", content: "Evergreenfield Montessori School" },
       { property: "og:locale", content: "en_GH" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: opts.title },
       { name: "twitter:description", content: opts.description },
-      { name: "twitter:image", content: OG_IMAGE },
-      { name: "theme-color", content: "#041a36" },
+      { name: "twitter:image", content: OG_IMAGE },      { name: "theme-color", content: "#041a36" },
     ],
     links: [{ rel: "canonical", href: url }],
   };
