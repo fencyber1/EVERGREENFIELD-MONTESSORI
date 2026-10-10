@@ -1,6 +1,6 @@
 export const SITE_URL = "https://evergreenfield-montessori.vercel.app";
 export const SITE_NAME = "Evergreenfield Montessori School";
-export const OG_IMAGE = `${SITE_URL}/logo.jpg`; // TODO: add a proper 1200x630 og-image.png to public/
+export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 export const PHONE_MAIN = "+233553355377";
 export const PHONE_DISPLAY = "055 335 5377";
 export const WHATSAPP_URL = "https://wa.me/233553355377";

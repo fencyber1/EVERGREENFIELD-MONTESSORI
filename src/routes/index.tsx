@@ -9,9 +9,9 @@ import { JsonLd, seoPage, schoolSchema } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => seoPage({
-    title: "Montessori School in Ghana — Evergreenfield, Accra | Creche to JHS",
+    title: "Evergreenfield Montessori School, Accra | Creche to JHS",
     description:
-      "Evergreenfield Montessori School is a Montessori school in Ghana offering the Ghana curriculum with the Montessori method, from Creche to JHS at Ablekuma Fan-Milk, Accra.",
+      "Evergreenfield Montessori School, Ablekuma Fan-Milk, Accra — Creche to JHS. Ghana curriculum with the Montessori method.",
     path: "/",
   }),
   component: Index,
