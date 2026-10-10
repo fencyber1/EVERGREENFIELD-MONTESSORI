@@ -1,9 +1,9 @@
 export const SITE_URL = "https://evergreenfieldmontessori.com"; // TODO: update to the real domain when available
 export const SITE_NAME = "Evergreenfield Montessori School";
-export const OG_IMAGE = `${SITE_URL}/og-image.png`; // TODO: add og-image.png to public/
-export const PHONE_MAIN = "+233531234567"; // fictional demo number
-export const PHONE_DISPLAY = "053 123 4567"; // fictional demo number
-export const WHATSAPP_URL = "https://wa.me/233531234567"; // fictional demo number
+export const OG_IMAGE = `${SITE_URL}/logo.jpg`; // TODO: add a proper 1200x630 og-image.png to public/
+export const PHONE_MAIN = "+233553355377";
+export const PHONE_DISPLAY = "055 335 5377";
+export const WHATSAPP_URL = "https://wa.me/233553355377";
 export const SITE_EMAIL = "info@evergreenfieldmontessori.edu.gh"; // fictional demo email
 export const MOTTO = "Knowledge, Scholarship, Illumination";
 export const ADDRESS_SHORT = "Plot 12, Mango Avenue, Ablekuma Fan-Milk, Accra, Ghana"; // fictional demo address
@@ -48,7 +48,7 @@ export const schoolSchema = {
   name: SITE_NAME,
   slogan: MOTTO,
   url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
+  logo: `${SITE_URL}/logo.jpg`,
   image: OG_IMAGE,
   email: SITE_EMAIL,
   telephone: PHONE_MAIN,
@@ -92,7 +92,7 @@ export const faqSchema = {
       name: "What ages does Evergreenfield Montessori School accept?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We welcome children from 18 months to 15 years — from Creche to JHS — call 053 123 4567 and we will help with class placement.",
+        text: "We welcome children from 18 months to 15 years — from Creche to JHS — call 055 335 5377 and we will help with class placement.",
       },
     },
     {
@@ -108,7 +108,7 @@ export const faqSchema = {
       name: "Can I tour the campus before enrolling?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Appointments may be booked by phone — call 053 123 4567 — and we will arrange a weekday visit.",
+        text: "Yes. Appointments may be booked by phone — call 055 335 5377 — and we will arrange a weekday visit.",
       },
     },
     {

@@ -14,10 +14,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AdmissionsChat } from "@/components/school-shared";
 import { SiteShell } from "@/components/site-shell";
 
-// TODO: once public/logo.png (school crest) is added, point the icon links below to "/logo.png".
-const FAVICON =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231d6b3c'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='bold' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E";
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -89,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Evergreenfield Montessori School" },
       { property: "og:locale", content: "en_GH" },
-      { property: "og:image", content: "https://evergreenfieldmontessori.com/og-image.png" },
+      { property: "og:image", content: "https://evergreenfieldmontessori.com/logo.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#041a36" },
     ],
@@ -98,8 +94,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: FAVICON, type: "image/svg+xml" },
-      { rel: "apple-touch-icon", href: FAVICON },
+      { rel: "icon", href: "/logo.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/logo.jpg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" },

@@ -43,7 +43,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
       lines.push("");
       lines.push(`Message: ${get("message")}`);
     }
-    window.open(`https://wa.me/233531234567?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+    window.open(`https://wa.me/233553355377?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
     setSent(true);
   }
   return (
@@ -52,11 +52,11 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
         <label className="text-sm text-paper/80">Parent name<input required name="name" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="Your name" /></label>
         <label className="text-sm text-paper/80">Email<input required type="email" name="email" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="yourname@gmail.com" /></label>
       </div>
-      <label className="mt-4 block text-sm text-paper/80">Phone number<input required type="tel" inputMode="tel" name="phone" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="053 123 4567" /></label>
+      <label className="mt-4 block text-sm text-paper/80">Phone number<input required type="tel" inputMode="tel" name="phone" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="055 335 5377" /></label>
       <label className="mt-4 block text-sm text-paper/80">Class of interest<select name="class" className="mt-1 w-full rounded-md border border-paper/20 bg-ink px-3 py-2.5 text-paper outline-none focus:border-action"><option>Creche</option><option>Nursery</option><option>Kindergarten</option><option>Primary</option><option>JHS</option><option>Not sure yet</option></select></label>
       {!compact && <label className="mt-4 block text-sm text-paper/80">How can we help?<textarea required name="message" rows={4} className="mt-1 w-full resize-none rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="Tell us about your child and what you would like to know." /></label>}
       <Button type="submit" className="mt-5 h-11 w-full rounded-none bg-action text-action-foreground hover:bg-action/90"><Send /> Send to Admissions</Button>
-      {sent ? <p role="status" className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-paper"><Check className="size-4 text-growth" /> WhatsApp is opening — press send there to reach admissions.</p> : <p className="mt-3 text-center text-[11px] text-paper/50">Prefer to talk? Call 053 123 4567.</p>}
+      {sent ? <p role="status" className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-paper"><Check className="size-4 text-growth" /> WhatsApp is opening — press send there to reach admissions.</p> : <p className="mt-3 text-center text-[11px] text-paper/50">Prefer to talk? Call 055 335 5377.</p>}
     </form>
   );
 }
@@ -64,7 +64,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
 const answers = [
   ["How do I apply?", "Visit Admissions for the four-step application guide and enquiry form."],
   ["Can I tour the campus?", "Yes. Use Contact Admissions to request a weekday visit."],
-  ["What ages do you serve?", "We welcome children from 18 months to 15 years — from Creche to JHS — call 053 123 4567 and we will help with class placement."],
+  ["What ages do you serve?", "We welcome children from 18 months to 15 years — from Creche to JHS — call 055 335 5377 and we will help with class placement."],
 ] as const;
 
 export function AdmissionsChat() {

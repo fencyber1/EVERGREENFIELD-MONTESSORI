@@ -36,18 +36,18 @@ function SchoolMonogram({ className = "" }: { className?: string }) {
   );
 }
 
-// Shows public/logo.png once added; falls back to the monogram until then.
+// Shows public/logo.jpg (school crest) in its natural aspect; falls back to the monogram until then.
 function SchoolCrest({ className = "" }: { className?: string }) {
   const [missing, setMissing] = useState(false);
   if (missing) return <SchoolMonogram className={className} />;
   return (
     <img
-      src="/logo.png"
+      src="/logo.jpg"
       alt="Evergreenfield Montessori School crest"
-      width={48}
-      height={48}
+      width={96}
+      height={96}
       onError={() => setMissing(true)}
-      className={`size-12 shrink-0 rounded-full bg-white object-contain p-0.5 shadow-sm ring-1 ring-ink/10 ${className}`}
+      className={`h-12 w-auto shrink-0 rounded-md bg-white object-contain px-1 shadow-sm ring-1 ring-ink/10 ${className}`}
     />
   );
 }
@@ -60,7 +60,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <JsonLd data={schoolSchema} />
       {crumbs && <JsonLd data={crumbs} />}
       <div className="bg-amber-400 px-4 py-2 text-center text-xs font-black uppercase tracking-[0.14em] text-ink">
-        Demo website — all names, photos, numbers and addresses on this site are fictional and for demonstration only
+        Demo website — photos, names and addresses on this site are fictional and for demonstration only
       </div>
       <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
@@ -90,7 +90,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
           <div className="hidden items-center gap-2 sm:flex">
             <Button asChild variant="ghost" size="icon" aria-label="Call admissions">
-              <a href="tel:+233531234567"><Phone /></a>
+              <a href="tel:+233553355377"><Phone /></a>
             </Button>
             <Button asChild className="rounded-none bg-action text-action-foreground hover:bg-action/90">
               <Link to="/contact"><span className="size-2 rounded-full bg-action-foreground" />Contact Admissions</Link>
@@ -146,7 +146,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-action">Admissions</p>
             <div className="mt-4 space-y-3 text-sm">
-              <a href="tel:+233531234567" className="flex items-center gap-2 hover:text-paper"><Phone className="size-4" /> 053 123 4567</a>
+              <a href="tel:+233553355377" className="flex items-center gap-2 hover:text-paper"><Phone className="size-4" /> 055 335 5377</a>
               <a href="https://www.google.com/maps/search/?api=1&query=Mango+Avenue+Ablekuma+Fan-Milk+Accra" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-paper"><MapPin className="size-4" /> Plot 12, Mango Avenue, Ablekuma Fan-Milk</a>
               <a href="mailto:info@evergreenfieldmontessori.edu.gh" className="flex items-center gap-2 hover:text-paper"><Mail className="size-4" /> info@evergreenfieldmontessori.edu.gh</a>
               <Link to="/contact" className="flex items-center gap-2 hover:text-paper"><MessageCircle className="size-4" /> Ask a question</Link>
@@ -158,9 +158,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink/10 bg-paper/95 p-3 backdrop-blur-md lg:hidden">
         <div className="mx-auto flex max-w-md gap-2">
-          <Button asChild variant="outline" size="icon" className="size-11 shrink-0 rounded-full"><a href="tel:+233531234567" aria-label="Call admissions"><Phone /></a></Button>
+          <Button asChild variant="outline" size="icon" className="size-11 shrink-0 rounded-full"><a href="tel:+233553355377" aria-label="Call admissions"><Phone /></a></Button>
           <Button asChild className="h-11 flex-1 rounded-none bg-action text-action-foreground hover:bg-action/90"><Link to="/contact">Contact Admissions</Link></Button>
-          <Button asChild variant="outline" size="icon" className="size-11 shrink-0 rounded-full border-growth/40 text-growth hover:border-growth hover:bg-growth/10"><a href="https://wa.me/233531234567?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20admissions." target="_blank" rel="noreferrer" aria-label="Chat with admissions on WhatsApp"><MessageCircle /></a></Button>
+          <Button asChild variant="outline" size="icon" className="size-11 shrink-0 rounded-full border-growth/40 text-growth hover:border-growth hover:bg-growth/10"><a href="https://wa.me/233553355377?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20admissions." target="_blank" rel="noreferrer" aria-label="Chat with admissions on WhatsApp"><MessageCircle /></a></Button>
         </div>
       </div>
     </div>
