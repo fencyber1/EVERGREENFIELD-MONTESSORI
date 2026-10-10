@@ -1,7 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
-import readingImage from "@/assets/honeywell-reading-sharp.png";
+
 import { PageHero, Section } from "@/components/school-shared";
+
 import { seoPage } from "@/lib/seo";
-export const Route=createFileRoute("/programs")({head:()=>seoPage({title:"Programs & Curriculum — Creche, Nursery & Preschool | Honeywell School",description:"Explore Honeywell School's UK EYFS curriculum across Creche, Nursery and Preschool for children 6 months to 5 years in Accra, Ghana — 7 areas of learning through play.",path:"/programs"}),component:Programs});
+
+export const Route=createFileRoute("/programs")({head:()=>seoPage({title:"Programs & Curriculum — Creche, Nursery & Preschool | Evergreenfield Montessori School",description:"Explore Evergreenfield Montessori School's UK EYFS curriculum across Creche, Nursery and Preschool for children 6 months to 5 years at Ablekuma Fan-Milk, Accra, Ghana — 7 areas of learning through play.",path:"/programs"}),component:Programs});
+
 const stages=[["Creche","Gentle first steps",["Warm, attentive care","Sensory play and discovery","Music, rhymes, and movement","Outdoor air and gentle routines"]],["Nursery","Confident little explorers",["Phonics and early language","Numbers through play","Art, colour, and creativity","Sharing, manners, and independence"]],["Preschool","Ready for primary school",["Reading and writing foundations","Early mathematics","Nature and the world around us","Confidence, focus, and school habits"]]];
-function Programs(){return <main><PageHero eyebrow="Programs & curriculum" title="Learning that grows with your child." intro="Honeywell School proudly uses the UK Early Years Foundation Stage (EYFS) Curriculum — the gold standard for early childhood education — taught through safe, loving, play-based learning for children 6 months to 5 years." image={readingImage} imageAlt="Honeywell School pupils reading together in class"/><Section eyebrow="Learning pathways" title="A gentle journey from first steps to school readiness."><div className="grid gap-5 md:grid-cols-2">{stages.map(([name,ages,items])=><article key={name as string} className="rounded-lg border border-ink/10 bg-surface p-6"><p className="text-xs font-bold uppercase tracking-[0.18em] text-action">{name as string}</p><h2 className="mt-2 text-2xl font-black">{ages as string}</h2><ul className="mt-5 grid gap-2 text-sm text-ink-soft">{(items as string[]).map(i=><li key={i}>→ {i}</li>)}</ul></article>)}</div></Section><Section eyebrow="Our curriculum" title="Seven areas of learning, one joyful journey."><p className="max-w-3xl leading-relaxed text-ink-soft">From social interaction to creativity and innovation, the EYFS guides your child through 3 prime areas, then 4 specific areas — every step through play.</p><h3 className="mt-8 text-sm font-black uppercase tracking-[0.18em] text-action">3 Prime Areas</h3><div className="mt-4 grid gap-4 md:grid-cols-3">{[["Personal, Social and Emotional Development","Confidence, friendships, managing feelings."],["Communication and Language","Listening, understanding, speaking."],["Physical Development","Movement, health and self-care."]].map(([name,text],i)=><article key={name} className="rounded-lg border border-ink/10 bg-surface p-6"><p className="text-3xl font-black text-trust">{i+1}</p><h4 className="mt-3 text-lg font-extrabold">{name}</h4><p className="mt-2 text-sm leading-relaxed text-ink-soft">{text}</p></article>)}</div><h3 className="mt-8 text-sm font-black uppercase tracking-[0.18em] text-action">4 Specific Areas</h3><div className="mt-4 grid gap-4 md:grid-cols-2">{[["Literacy","Reading and writing."],["Mathematics","Numbers, shapes and measures."],["Understanding the World","Exploring people, nature and technology."],["Expressive Arts and Design","Art, music, imaginative play."]].map(([name,text],i)=><article key={name} className="rounded-lg border border-ink/10 bg-surface p-6"><p className="text-3xl font-black text-trust">{i+4}</p><h4 className="mt-3 text-lg font-extrabold">{name}</h4><p className="mt-2 text-sm leading-relaxed text-ink-soft">{text}</p></article>)}</div></Section><Section dark eyebrow="Beyond lessons" title="Every child needs more than one way to shine."><div className="grid gap-4 md:grid-cols-3">{[["Create","Art, music, dance, storytelling, and messy play."],["Play","Movement, outdoor games, and joyful exercise."],["Grow","Manners, sharing, independence, and kind habits."]].map(([h,p])=><article key={h} className="rounded-lg border border-paper/15 bg-paper/10 p-6"><h3 className="text-xl font-black">{h}</h3><p className="mt-2 text-sm leading-relaxed text-paper/65">{p}</p></article>)}</div></Section></main>}
+
+function Programs(){return <main>
+<PageHero eyebrow="Programs & curriculum" title="Learning that grows with your child." intro="Evergreenfield Montessori School proudly uses the UK Early Years Foundation Stage (EYFS) Curriculum — the gold standard for early childhood education — taught through safe, loving, play-based learning for children 6 months to 5 years."/>
+<Section eyebrow="Learning pathways" title="A gentle journey from first steps to school readiness.">
+<div className="grid gap-5 md:grid-cols-2">{stages.map(([name,ages,items])=>
+<article key={name as string} className="rounded-lg border border-ink/10 bg-surface p-6">
+<p className="text-xs font-bold uppercase tracking-[0.18em] text-action">{name as string}</p>
+<h2 className="mt-2 text-2xl font-black">{ages as string}</h2>
+<ul className="mt-5 grid gap-2 text-sm text-ink-soft">{(items as string[]).map(i=>
+<li key={i}>→ {i}</li>)}</ul>
+</article>)}</div>
+</Section>
+<Section eyebrow="Our curriculum" title="Seven areas of learning, one joyful journey.">
+<p className="max-w-3xl leading-relaxed text-ink-soft">From social interaction to creativity and innovation, the EYFS guides your child through 3 prime areas, then 4 specific areas — every step through play.</p>
+<h3 className="mt-8 text-sm font-black uppercase tracking-[0.18em] text-action">3 Prime Areas</h3>
+<div className="mt-4 grid gap-4 md:grid-cols-3">{[["Personal, Social and Emotional Development","Confidence, friendships, managing feelings."],["Communication and Language","Listening, understanding, speaking."],["Physical Development","Movement, health and self-care."]].map(([name,text],i)=>
+<article key={name} className="rounded-lg border border-ink/10 bg-surface p-6">
+<p className="text-3xl font-black text-trust">{i+1}</p>
+<h4 className="mt-3 text-lg font-extrabold">{name}</h4>
+<p className="mt-2 text-sm leading-relaxed text-ink-soft">{text}</p>
+</article>)}</div>
+<h3 className="mt-8 text-sm font-black uppercase tracking-[0.18em] text-action">4 Specific Areas</h3>
+<div className="mt-4 grid gap-4 md:grid-cols-2">{[["Literacy","Reading and writing."],["Mathematics","Numbers, shapes and measures."],["Understanding the World","Exploring people, nature and technology."],["Expressive Arts and Design","Art, music, imaginative play."]].map(([name,text],i)=>
+<article key={name} className="rounded-lg border border-ink/10 bg-surface p-6">
+<p className="text-3xl font-black text-trust">{i+4}</p>
+<h4 className="mt-3 text-lg font-extrabold">{name}</h4>
+<p className="mt-2 text-sm leading-relaxed text-ink-soft">{text}</p>
+</article>)}</div>
+</Section>
+<Section dark eyebrow="Beyond lessons" title="Every child needs more than one way to shine.">
+<div className="grid gap-4 md:grid-cols-3">{[["Create","Art, music, dance, storytelling, and messy play."],["Play","Movement, outdoor games, and joyful exercise."],["Grow","Manners, sharing, independence, and kind habits."].map(([h,p])=>
+<article key={h} className="rounded-lg border border-paper/15 bg-paper/10 p-6">
+<h3 className="text-xl font-black">{h}</h3>
+<p className="mt-2 text-sm leading-relaxed text-paper/65">{p}</p>
+</article>)}</div>
+</Section>
+</main>}

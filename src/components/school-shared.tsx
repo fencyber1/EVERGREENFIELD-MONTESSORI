@@ -15,7 +15,7 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt }: { eyebrow: 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/75 sm:text-lg">{intro}</p>
           <Button asChild className="mt-7 rounded-none bg-action text-action-foreground hover:bg-action/90"><Link to="/contact">Contact Admissions <ArrowRight /></Link></Button>
         </div>
-        {image && <div className="lg:col-span-5"><div className="-skew-x-3 overflow-hidden rounded-lg border border-paper/20 bg-paper/10 p-2"><img src={image} alt={imageAlt ?? "Honeywell School"} width={1280} height={900} className="aspect-[4/3] w-full object-cover" /></div></div>}
+        {image && <div className="lg:col-span-5"><div className="-skew-x-3 overflow-hidden rounded-lg border border-paper/20 bg-paper/10 p-2"><img src={image} alt={imageAlt ?? "Evergreenfield Montessori School"} width={1280} height={900} className="aspect-[4/3] w-full object-cover" /></div></div>}
       </div>
     </section>
   );
@@ -32,19 +32,18 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
     const values = new FormData(event.currentTarget);
     const get = (name: string) => String(values.get(name) ?? "").trim();
     const lines = [
-      "Hello Honeywell School \u2014 admission enquiry",
+      "Hello Evergreenfield Montessori School — admission enquiry",
       "",
       `Parent: ${get("name")}`,
       `Phone: ${get("phone")}`,
       `Email: ${get("email")}`,
       `Class: ${get("class")}`,
-      `Branch: ${get("branch")}`,
     ];
     if (!compact) {
       lines.push("");
       lines.push(`Message: ${get("message")}`);
     }
-    window.open(`https://wa.me/233244362657?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+    window.open(`https://wa.me/233553355377?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
     setSent(true);
   }
   return (
@@ -53,12 +52,11 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
         <label className="text-sm text-paper/80">Parent name<input required name="name" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="Your name" /></label>
         <label className="text-sm text-paper/80">Email<input required type="email" name="email" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="yourname@gmail.com" /></label>
       </div>
-      <label className="mt-4 block text-sm text-paper/80">Phone number<input required type="tel" inputMode="tel" name="phone" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="024 436 2657" /></label>
+      <label className="mt-4 block text-sm text-paper/80">Phone number<input required type="tel" inputMode="tel" name="phone" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="055 335 5377" /></label>
       <label className="mt-4 block text-sm text-paper/80">Class of interest<select name="class" className="mt-1 w-full rounded-md border border-paper/20 bg-ink px-3 py-2.5 text-paper outline-none focus:border-action"><option>Creche</option><option>Nursery</option><option>Preschool</option><option>Not sure yet</option></select></label>
-      <label className="mt-4 block text-sm text-paper/80">Preferred branch<select name="branch" className="mt-1 w-full rounded-md border border-paper/20 bg-ink px-3 py-2.5 text-paper outline-none focus:border-action"><option>Airport Residential Area</option><option>Palm Valley Estates, Oyarifa</option><option>Not sure yet</option></select></label>
       {!compact && <label className="mt-4 block text-sm text-paper/80">How can we help?<textarea required name="message" rows={4} className="mt-1 w-full resize-none rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="Tell us about your child and what you would like to know." /></label>}
       <Button type="submit" className="mt-5 h-11 w-full rounded-none bg-action text-action-foreground hover:bg-action/90"><Send /> Send to Admissions</Button>
-      {sent ? <p role="status" className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-paper"><Check className="size-4 text-growth" /> WhatsApp is opening — press send there to reach admissions.</p> : <p className="mt-3 text-center text-[11px] text-paper/50">Prefer to talk? Call 024 436 2657 or 055 941 9530.</p>}
+      {sent ? <p role="status" className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-paper"><Check className="size-4 text-growth" /> WhatsApp is opening — press send there to reach admissions.</p> : <p className="mt-3 text-center text-[11px] text-paper/50">Prefer to talk? Call 055 335 5377.</p>}
     </form>
   );
 }
@@ -66,7 +64,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
 const answers = [
   ["How do I apply?", "Visit Admissions for the four-step application guide and enquiry form."],
   ["Can I tour the campus?", "Yes. Use Contact Admissions to request a weekday visit."],
-  ["What ages do you serve?", "We welcome children from 6 months to 5 years — call 024 436 2657 or 055 941 9530 and we will help with class placement."],
+  ["What ages do you serve?", "We welcome children from 6 months to 5 years — call 055 335 5377 and we will help with class placement."],
 ] as const;
 
 export function AdmissionsChat() {

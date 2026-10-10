@@ -1,10 +1,15 @@
-export const SITE_URL = "https://honeywelledugh.com";
-export const SITE_NAME = "Honeywell School";
-export const OG_IMAGE = `${SITE_URL}/og-image.png`;
-export const PHONE_MAIN = "+233244362657";
-export const PHONE_OYARIFA = "+233559419530";
-export const SITE_EMAIL = "honeywellschools@gmail.com";
-export const MOTTO = "Love and Education That Enrich for a Life Time";
+export const SITE_URL = "https://evergreenfieldmontessori.com"; // TODO: update to the real domain when available
+export const SITE_NAME = "Evergreenfield Montessori School";
+export const OG_IMAGE = `${SITE_URL}/og-image.png`; // TODO: add og-image.png to public/
+export const PHONE_MAIN = "+233553355377";
+export const PHONE_DISPLAY = "055 335 5377";
+export const WHATSAPP_URL = "https://wa.me/233553355377";
+export const SITE_EMAIL = "evergreenfieldmontessori@gmail.com"; // TODO: update to the real school email
+export const MOTTO = "Love and Education That Enrich for a Life Time"; // TODO: update if Evergreenfield has its own motto
+export const ADDRESS_SHORT = "JMMR+W9, Ablekuma Fan-Milk, Accra, Ghana";
+export const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=JMMR%2BW9+Ablekuma+Fan-Milk+Accra";
+export const HOURS_SHORT = "Mon–Fri · 6:00am–5:00pm · Sat–Sun Closed";
 
 export function pageUrl(path: string) {
   return path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
@@ -47,48 +52,29 @@ export const schoolSchema = {
   image: OG_IMAGE,
   email: SITE_EMAIL,
   telephone: PHONE_MAIN,
-  foundingDate: "2014",
-  founder: [
-    { "@type": "Person", name: "Doris Archampong" },
-    { "@type": "Person", name: "Naana Pokua Biney" },
-  ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "226 Osibisa Close, Off Noi Fetreke Street, Airport Residential Area",
+    streetAddress: "JMMR+W9, Ablekuma Fan-Milk",
     addressLocality: "Accra",
     addressCountry: "GH",
   },
   location: [
     {
       "@type": "Place",
-      name: "Honeywell School — Airport Residential Area",
+      name: "Evergreenfield Montessori School — Ablekuma Fan-Milk",
       address: {
         "@type": "PostalAddress",
-        streetAddress:
-          "226 Osibisa Close, Off Noi Fetreke Street, Airport Residential Area, GPS GA-119-9300",
+        streetAddress: "JMMR+W9, Ablekuma Fan-Milk",
         addressLocality: "Accra",
         addressCountry: "GH",
       },
       telephone: PHONE_MAIN,
     },
-    {
-      "@type": "Place",
-      name: "Honeywell School — Palm Valley Estates, Oyarifa",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Palm Valley Estates, Oyarifa",
-        addressLocality: "Accra",
-        addressCountry: "GH",
-      },
-      telephone: PHONE_OYARIFA,
-    },
   ],
-  openingHours: "Mo-Fr 06:30-17:30",
-  sameAs: [
-    "https://web.facebook.com/honeywellschool",
-    "https://www.instagram.com/honeywellschool/",
-    "https://www.tiktok.com/@honeywell.schools",
-  ],
+  openingHours: "Mo-Fr 06:00-17:00",
+  // TODO: add official social profiles, e.g.
+  // sameAs: ["https://web.facebook.com/evergreenfieldmontessori"],
+  sameAs: [],
 };
 
 export const faqSchema = {
@@ -97,10 +83,10 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What ages does Honeywell School accept?",
+      name: "What ages does Evergreenfield Montessori School accept?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We welcome children from 6 months to 5 years — call 024 436 2657 or 055 941 9530 and we will help with class placement.",
+        text: "We welcome children from 6 months to 5 years — call 055 335 5377 and we will help with class placement.",
       },
     },
     {
@@ -116,7 +102,7 @@ export const faqSchema = {
       name: "Can I tour the campus before enrolling?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Appointments may be booked by phone — call 024 436 2657 or 055 941 9530 — and we will arrange a weekday visit to either branch.",
+        text: "Yes. Appointments may be booked by phone — call 055 335 5377 — and we will arrange a weekday visit.",
       },
     },
     {
@@ -124,7 +110,7 @@ export const faqSchema = {
       name: "What are the school hours?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "School begins at 6:30 a.m. and closes at 5:30 p.m., Monday to Friday.",
+        text: "School runs Monday to Friday, 6:00 a.m. to 5:00 p.m. Saturday and Sunday are closed.",
       },
     },
     {
@@ -137,10 +123,10 @@ export const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Where is Honeywell School located?",
+      name: "Where is Evergreenfield Montessori School located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Branch 1 is at 226 Osibisa Close, Off Noi Fetreke Street, Airport Residential Area, Accra (GPS GA-119-9300). Branch 2 is at Palm Valley Estates, Oyarifa, Accra.",
+        text: "We are at JMMR+W9, Ablekuma Fan-Milk, Accra, Ghana.",
       },
     },
   ],
