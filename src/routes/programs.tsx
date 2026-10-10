@@ -37,7 +37,7 @@ function Programs(){return <main>
 </article>)}</div>
 </Section>
 <Section dark eyebrow="Beyond lessons" title="Every child needs more than one way to shine.">
-<div className="grid gap-4 md:grid-cols-3">{[["Create","Art, music, dance, storytelling, and creative play."],["Play","Sports, clubs, movement, and joyful exercise."],["Grow","Manners, leadership, service, and kind habits."].map(([h,p])=>
+<div className="grid gap-4 md:grid-cols-3">{[["Create","Art, music, dance, storytelling, and creative play."],["Play","Sports, clubs, movement, and joyful exercise."],["Grow","Manners, leadership, service, and kind habits."]].map(([h,p])=>
 <article key={h} className="rounded-lg border border-paper/15 bg-paper/10 p-6">
 <h3 className="text-xl font-black">{h}</h3>
 <p className="mt-2 text-sm leading-relaxed text-paper/65">{p}</p>
